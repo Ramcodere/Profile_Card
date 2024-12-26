@@ -1,0 +1,76 @@
+
+/* App General Styles */
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f4f8; /* Light background */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+}
+
+/* Card Styles */
+.card {
+  display: flex;
+  background-color: #ffffff;
+  width: 600px; /* Rectangle card */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Modern shadow */
+  border: 2px solid #e0e0e0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styles */
+.card img {
+  width: 150px; /* Square photo */
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 20px; /* Space between image and details */
+}
+
+/* Details Section */
+.card .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Align details vertically */
+  gap: 10px;
+}
+
+.card .info-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  color: #333;
+}
+
+.card .info-row .label {
+  font-weight: bold;
+  color: #666;
+}
+
+.card .info-row .value {
+  color: #222;
+  font-weight: 500;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column; /* Stack image and details vertically on smaller screens */
+    align-items: center;
+    width: 90%;
+  }
+
+  .card img {
+    margin-right: 0;
+    margin-bottom: 20px; /* Add space below image */
+  }
+}
